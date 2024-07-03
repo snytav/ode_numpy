@@ -93,6 +93,7 @@ def loss_function(W, x):
 
 W = [npr.randn(1, 10), npr.randn(10, 1)]
 lmb = 0.001
+np.savetxt('W00.txt',W[0])
 
 # x = np.array(1)
 # print neural_network(W, x)
