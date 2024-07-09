@@ -94,10 +94,10 @@ def loss_function(W, x):
 W = [npr.randn(1, 10), npr.randn(10, 1)]
 lmb = 0.001
 np.savetxt('W00.txt',W[0])
-
-# x = np.array(1)
-# print neural_network(W, x)
-# print d_neural_network_dx(W, x)
+np.savetxt('W01.txt',W[1])
+x = np.array(1)
+print(neural_network(W, x))
+print(d_neural_network_dx(W, x))
 
 for i in range(1000):
     loss_grad =  grad(loss_function)(W, x_space)
