@@ -99,6 +99,8 @@ x = np.array(1)
 print(neural_network(W, x))
 print(d_neural_network_dx(W, x))
 
+lf = loss_function(W, x_space)
+
 for i in range(1000):
     loss_grad =  grad(loss_function)(W, x_space)
 
