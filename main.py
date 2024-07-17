@@ -96,9 +96,12 @@ lmb = 0.001
 np.savetxt('W00.txt',W[0])
 np.savetxt('W01.txt',W[1])
 
-# x = np.array(1)
-# print neural_network(W, x)
-# print d_neural_network_dx(W, x)
+x = np.array(1)
+print(neural_network(W, x))
+print(d_neural_network_dx(W, x))
+print(d_neural_network_dx(W, x_space[1]))
+print(d_neural_network_dx(W, x_space[2]))
+
 
 for i in range(1000):
     loss_grad =  grad(loss_function)(W, x_space)
